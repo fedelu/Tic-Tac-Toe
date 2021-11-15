@@ -57,7 +57,7 @@ function playAgain(){
      resetGame();  
      window.isGameOver = false;  
      for(var k =0; k<span.length; k++){  
-          span[k].parentNode.className= span[k].parentNode.className.replace("activeBox", "");//remove activebox class; you can use classlist.remove , but it doesn't support all browsers  
+          span[k].parentNode.className= span[k].parentNode.className.replace("activeBox", ""); 
      }  
 }  
 function resetGame(){  
@@ -68,7 +68,7 @@ function resetGame(){
      playerTurn = "x";  
 }  
 function gameOver(a){  
-     var gameOverAlertElement = "<b>GAME OVER</b><br><br> Player " + span[a].dataset.player.toUpperCase() + ' Win !!! <br><br>' + restartButton  
+     var gameOverAlertElement = "<b>GAME OVER</b><br><br> Player " + span[a].dataset.player.toUpperCase() + ' Ganaste !!! <br><br>' + restartButton  
      var div = document.createElement("div");  
      div.className = "alert";  
      div.innerHTML = gameOverAlertElement;  
@@ -77,7 +77,7 @@ function gameOver(a){
      moves = 0;  
 }  
 function draw(){  
-     var drawAlertElement = '<b>DRAW!!!</b><br><br>' + restartButton;  
+     var drawAlertElement = '<b>Empate!!!</b><br><br>' + restartButton;  
      var div = document.createElement("div");  
      div.className = "alert";  
      div.innerHTML = drawAlertElement;  
