@@ -1,4 +1,42 @@
 
+#titulo {
+    text-align: center;
+}
+#backround {
+    height: 100vh;
+    width: 100%;
+}
+#selector-tema{
+    display: flex;
+    flex-direction: row;
+    top:55%;
+    background: rgba(51, 51, 51, 0.5);
+    width: 80px;
+    height: 35px;
+    margin:10px;
+    margin-right: 5px;
+}
+#a-rojo,
+#a-verde,
+#a-azul{
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ffffff;
+    display: block;
+    margin: 0px auto;
+    margin:5px;
+    padding: 5px;
+    cursor: pointer;
+}
+#a-rojo{
+    background: lightsalmon ;
+}
+#a-verde{
+    background: lightgreen ;
+}
+#a-azul{
+    background: lightblue;
+}
 body{  
     background: ghostwhite;  
     color: dimgray;  
