@@ -1,3 +1,7 @@
+let nombre1 = prompt ('Dime el primer jugador');
+let nombre2 = prompt ('Dime el segundo jugador'); 
+console.log (`El jugador "X" es ${nombre1}`);
+console.log (`El jugador "y" es ${nombre2}`);
 $(document).ready(function(){
      var tema =$("#tema");
      $("#a-verde").click(function(){
@@ -68,7 +72,7 @@ function resetGame(){
      playerTurn = "x";  
 }  
 function gameOver(a){  
-     var gameOverAlertElement = "<b>GAME OVER</b><br><br> Player " + span[a].dataset.player.toUpperCase() + ' Ganaste !!! <br><br>' + restartButton  
+     var gameOverAlertElement = "<b>GAME OVER</b><br><br> " + span[a].dataset.player.toUpperCase() + ' Ganaste !!! <br><br>' + restartButton  
      var div = document.createElement("div");  
      div.className = "alert";  
      div.innerHTML = gameOverAlertElement;  
