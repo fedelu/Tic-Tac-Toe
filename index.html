@@ -10,6 +10,14 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> 
 </head>
 <body> 
+     <header>
+          <nav>
+               <ul>
+                    <li><a href="index.html">Jugar</a></li>
+                    <li><a href="contactanos.html">Propon un Juego</a></li>
+               </ul>
+          </nav>
+     </header>
      <div id="backround">
      <section>
       <h1 id="titulo"> Tic Tac Toe </h1>  
@@ -18,6 +26,26 @@
           <div id="a-rojo"></div>
           <div id="a-azul"></div>
       </div>
+      <div>
+               <label for="Jugador-1">Jugador X: </label>
+               <input type="text" id="Jugador-1" > 
+               
+               <button type="button"  onclick="getJugador1()"> 
+                   Apretame!
+               </button> 
+               
+               <p id="Jugador1"></p> 
+      </div>
+      <div>
+          <label for="Jugador-2">Jugador Y: </label>
+          <input type="text" id="Jugador-2" > 
+          
+          <button type="button"  onclick="getJugador2()"> 
+               Apretame! 
+          </button> 
+          
+          <p id="Jugador2"></p> 
+ </div>
      </section>
      <div id="container">  
           <div class="block">  

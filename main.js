@@ -1,7 +1,18 @@
-let nombre1 = prompt ('Dime el primer jugador');
-let nombre2 = prompt ('Dime el segundo jugador'); 
-console.log (`El jugador "X" es ${nombre1}`);
-console.log (`El jugador "y" es ${nombre2}`);
+
+function jugador(nombre) {
+     this.nombre = nombre
+}
+
+const getJugador1 = newjugador =>{
+     let newjugador = document.getElementById("Jugador-1").value; 
+     document.getElementById("Jugador1").innerHTML = newjugador; 
+   }
+
+   const getJugador2 = newjugador =>{
+     let newjugador = document.getElementById("Jugador-2").value; 
+     document.getElementById("Jugador2").innerHTML = newjugador; 
+   }
+
 $(document).ready(function(){
      var tema =$("#tema");
      $("#a-verde").click(function(){
@@ -89,3 +100,43 @@ function draw(){
      window.isGameOver = true;  
      moves = 0;  
 }  
+
+function validaForm(){
+     if($("#nombre").val() == ""){
+         alert("El campo Nombre no puede estar vacío.");
+         $("#nombre").focus();   
+         return false;
+     }
+     if($("#apellidos").val() == ""){
+         alert("El campo Apellidos no puede estar vacío.");
+         $("#apellidos").focus();
+         return false;
+     }
+     if($("#juegoNuevo").val() == ""){
+         alert("El campo Di el juego no puede estar vacío.");
+         $("#juegoNuevo").focus();
+         return false;
+     }
+ 
+     if(!$("#mayor").is(":checked")){
+         alert("Debe confirmar que es mayor de 15 años.");
+         return false;
+     }
+ 
+     return true; 
+ }
+
+ $(document).ready( function() {   
+     $("#botonenviar").click( function() {  
+         if(validaForm()){                             
+             $.post("enviar.php",$("#formdata").serialize(),function(res){
+                 $("#formulario").fadeOut("slow"); 
+                 if(res == 1){
+                     $("#exito").delay(500).fadeIn("slow");   
+                 } else {
+                     $("#fracaso").delay(500).fadeIn("slow");    
+                 }
+             });
+         }
+     });    
+ });
